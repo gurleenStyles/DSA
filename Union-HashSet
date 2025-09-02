@@ -1,0 +1,36 @@
+
+import java.util.*;
+class okay{
+    static ArrayList<Integer> FindUnion (int arr[],int nums[], int n, int m){
+        HashSet<Integer>ah=new HashSet<>();
+        ArrayList<Integer>union=new ArrayList<>();
+        for(int i=0; i<n;i++)
+           ah.add(arr[i]);
+        for(int i=0; i<m;i++)
+           ah.add(nums[i]);
+        for(int okay:ah)
+           union.add(okay);
+        return union;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[]=new int[5];
+		int nums[]=new int[5];
+		Scanner sc= new Scanner(System.in);
+		for(int i=0;i<5;i++){
+		    arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<5;i++){
+		    nums[i]=sc.nextInt();
+		}
+		int n=arr.length;
+		int m=nums.length;
+		okay obj= new okay();
+		ArrayList<Integer>ans=obj.FindUnion(arr,nums,n,m);
+		for(int um:ans){
+		    System.out.print(um+ " ");
+		}
+	}
+}
