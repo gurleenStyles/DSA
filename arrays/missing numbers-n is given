@@ -1,0 +1,31 @@
+
+import java.util.*;
+class okay{
+    int missingNum(int arr[], int N){
+        for(int i=0;i<=N;i++){
+            int flag=0;
+            for(int j=0;j<5;j++){
+                if(arr[j]==i){
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)return i;
+        }
+        return -1;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[]=new int[5];
+		Scanner sc= new Scanner(System.in);
+		for(int i=0;i<5;i++){
+		    arr[i]=sc.nextInt();
+		}
+	    int N=sc.nextInt();
+		okay obj= new okay();
+	    int ans=obj.missingNum(arr,N);
+		System.out.println(ans);
+	}
+}  
